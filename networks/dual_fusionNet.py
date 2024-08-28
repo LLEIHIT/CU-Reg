@@ -504,7 +504,7 @@ class RegistNetwork(nn.Module):
         frame, seg_feature = self.frameemb(frame)
         print('seg_feature {}'.format( seg_feature[0][1,:,:].unsqueeze(0))) # [bs, 128, 128, 1]
         cv2.imwrite('/home/jun/Desktop/project/slice2volume/FVR-Net/experiments_Prompt_plusInterfplusDFplusGatedNoTF/logs/CAMUS/test.png', seg_feature[0][1,:,:].unsqueeze(0).permute(1,2,0).cpu().numpy()*255.0)
-        sys.exit()
+        # sys.exit()
         # print('frameemb {}'.format(frame)) # [bs, 32, 128, 128]
         # print('seg_feature {}'.format(seg_feature.shape)) # [bs, 128, 128, 1]
         # print('seg_feature {}'.format(seg_feature)) # [bs, 128, 128, 1]
